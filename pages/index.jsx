@@ -20,13 +20,15 @@ export async function getStaticProps() {
 export default function Home({ items }) {
   console.log({ items });
 
+  // TODO: Write fallback logic for when there are no items
+
   const { fields = {} } = items && items.length > 0 ? items[0] : {};
   const { accordionItems = [] } = fields;
 
   return (
     <>
       <h1 className={styles.title}>FAQ</h1>
-      <Accordion items={accordionItems} />
+      {accordionItems.length > 0 ? <Accordion items={accordionItems} /> : ""}
     </>
   );
 }
