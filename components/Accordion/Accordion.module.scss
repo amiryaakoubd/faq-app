@@ -1,0 +1,8 @@
+@import "../../styles/variables.scss";
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: $spacing-xs;
+}

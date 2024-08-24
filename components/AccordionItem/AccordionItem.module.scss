@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+
+.item {
+  border: 2px solid $color-background-light;
+  border-radius: 4px;
+  background-color: $color-background-light;
+}
+
+.header {
+  border: none;
+  padding: $spacing-sm $spacing-md;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  font-size: $font-size-lg;
+  transition: background-color 0.3s;
+  background-color: transparent;
+  color: $color-white;
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $font-size-xl;
+  }
+}
+
+.header.active {
+  color: $color-primary;
+}
+
+.content {
+  padding: $spacing-sm $spacing-md;
+  font-size: $font-size-md;
+  background-color: $color-background;
+  border-radius: 0 0 4px 4px;
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $font-size-lg;
+  }
+}
