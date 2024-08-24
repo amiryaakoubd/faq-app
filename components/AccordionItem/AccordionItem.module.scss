@@ -12,6 +12,10 @@
   }
 }
 
+.headerContainer {
+  margin: 0;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -46,6 +50,8 @@
 }
 
 .content {
+  display: none;
+  margin: 0;
   padding: $spacing-sm $spacing-md;
   font-size: $font-size-md;
   background-color: $color-background;
@@ -56,6 +62,6 @@
   }
 }
 
-.header.active + .content {
+.activeContent {
   display: block;
 }

@@ -10,9 +10,11 @@ const Accordion = ({ items }) => {
   };
 
   return (
-    <div className={styles.accordion}>
+    <section className={styles.accordion}>
       {items.map((item, index) => {
         const { name = "", text = "" } = item?.fields;
+
+        // TODO: key prop should be unique
         return (
           <AccordionItem
             key={index}
@@ -24,7 +26,7 @@ const Accordion = ({ items }) => {
           />
         );
       })}
-    </div>
+    </section>
   );
 };
 
