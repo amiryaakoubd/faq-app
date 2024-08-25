@@ -62,7 +62,7 @@ export default function Home({ items, error }) {
     <>
       <h1 className={styles.title}>Spørsmål og svar</h1>
       <p className={styles.description}>
-        Har du noen spørsmål angående Novacare? Her finner du kanskje noen svar
+        Har du noen spørsmål angående Novacare? Her finner du kanskje noen svar.
       </p>
       {renderContent()}
     </>
