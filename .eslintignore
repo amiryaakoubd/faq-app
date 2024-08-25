@@ -1,3 +1,9 @@
 node_modules/
 .next/
 dist/
+
+# TODO: Fix issue with installing eslint-plugin-jest to remove this in the future
+__tests__/
+__mocks__/
+jest.config.js
+jest.setup.js

@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import InfoIcon from "../../icons/InfoIcon/InfoIcon";
-import styles from "./ErrorMessage.module.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import InfoIcon from '../../icons/InfoIcon/InfoIcon';
+import styles from './ErrorMessage.module.scss';
 
-const ErrorMessage = ({ message = "" }) => {
+const ErrorMessage = ({ message = '' }) => {
   return (
     <div className={styles.errorMessage}>
       <InfoIcon fill="#d43535" />

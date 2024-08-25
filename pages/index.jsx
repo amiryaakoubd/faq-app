@@ -1,12 +1,13 @@
-import Accordion from "../components/Accordion/Accordion";
-import ErrorMessage from "../components/ErrorMessage/ErrorMessage";
-import client from "../lib/contentful";
-import styles from "../styles/Home.module.scss";
+import React from 'react';
+import Accordion from '../components/Accordion/Accordion';
+import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
+import client from '../lib/contentful';
+import styles from '../styles/Home.module.scss';
 
 export async function getStaticProps() {
   try {
     const response = await client.getEntries({
-      content_type: "accordion",
+      content_type: 'accordion',
       include: 2,
     });
     const items = response.items;
@@ -18,7 +19,7 @@ export async function getStaticProps() {
       },
     };
   } catch (error) {
-    console.error("Error fetching data from Contentful:", error);
+    console.error('Error fetching data from Contentful:', error);
 
     return {
       props: {

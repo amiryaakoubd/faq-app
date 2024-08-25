@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import styles from "./Accordion.module.scss";
-import AccordionItem from "../AccordionItem/AccordionItem";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import styles from './Accordion.module.scss';
+import AccordionItem from '../AccordionItem/AccordionItem';
 
 const Accordion = ({ items = [] }) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -17,7 +17,7 @@ const Accordion = ({ items = [] }) => {
   return (
     <div className={styles.accordion}>
       {items.map((item, index) => {
-        const { name = "", text = "" } = item?.fields;
+        const { name = '', text = '' } = item?.fields;
         return (
           <AccordionItem
             key={`accordion-item-${index}`}

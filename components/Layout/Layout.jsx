@@ -1,6 +1,6 @@
-import React from "react";
-import Head from "next/head";
-import styles from "./Layout.module.scss";
+import React from 'react';
+import Head from 'next/head';
+import styles from './Layout.module.scss';
 
 const Layout = ({ children }) => {
   return (
@@ -8,10 +8,7 @@ const Layout = ({ children }) => {
       <Head>
         <title>Spørsmål og svar</title>
         <meta lang="no" />
-        <meta
-          name="description"
-          content="En nettside med spørsmål og svar om Novacare"
-        />
+        <meta name="description" content="En nettside med spørsmål og svar om Novacare" />
         <link rel="icon" href="/logo_400x400.png" />
         {/* Add metatags for better SEO here */}
       </Head>

@@ -1,10 +1,11 @@
-import "../styles/global.scss";
-import { Poppins } from "next/font/google";
-import Layout from "../components/Layout/Layout";
+import React from 'react';
+import '../styles/global.scss';
+import { Poppins } from 'next/font/google';
+import Layout from '../components/Layout/Layout';
 
 const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600"],
+  subsets: ['latin'],
+  weight: ['400', '600'],
 });
 
 export default function MyApp({ Component, pageProps }) {

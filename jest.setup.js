@@ -1,4 +1,4 @@
-import "@testing-library/jest-dom";
+import '@testing-library/jest-dom';
 
 // Automatically mock the contentful client
-jest.mock("./lib/contentful");
+jest.mock('./lib/contentful');

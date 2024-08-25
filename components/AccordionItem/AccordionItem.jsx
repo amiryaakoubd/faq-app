@@ -1,15 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./AccordionItem.module.scss";
-import CaretIcon from "../../icons/CaretIcon/CaretIcon";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './AccordionItem.module.scss';
+import CaretIcon from '../../icons/CaretIcon/CaretIcon';
 
-const AccordionItem = ({
-  index,
-  isActive,
-  onToggle,
-  title = "",
-  content = "",
-}) => {
+const AccordionItem = ({ index, isActive, onToggle, title = '', content = '' }) => {
   const headerId = `accordion-header-${index}`;
   const panelId = `accordion-panel-${index}`;
 
@@ -21,19 +15,17 @@ const AccordionItem = ({
           id={headerId}
           aria-controls={panelId}
           aria-expanded={isActive}
-          className={`${styles.header} ${isActive ? styles.active : ""}`}
+          className={`${styles.header} ${isActive ? styles.active : ''}`}
           onClick={() => onToggle(index)}
         >
           {title}
-          <CaretIcon
-            className={`${styles.icon} ${isActive ? styles.activeIcon : ""}`}
-          />
+          <CaretIcon className={`${styles.icon} ${isActive ? styles.activeIcon : ''}`} />
         </button>
       </h3>
       <section
         id={panelId}
         aria-labelledby={headerId}
-        className={`${styles.content} ${isActive ? styles.activeContent : ""}`}
+        className={`${styles.content} ${isActive ? styles.activeContent : ''}`}
         aria-hidden={!isActive}
       >
         <p className={styles.contentParagraph}>{content}</p>
