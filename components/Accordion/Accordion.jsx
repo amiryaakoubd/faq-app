@@ -6,15 +6,16 @@ import AccordionItem from "../AccordionItem/AccordionItem";
 const Accordion = ({ items = [] }) => {
   const [activeIndex, setActiveIndex] = useState(null);
   // You could also move the active logic inside the AccordionItem component so
-  // that each item can manage its own state. This would make the Accordion component
-  // more of a container component that only passes down props to the AccordionItem component.
+  // that each item can manage its own state. This would make the Accordion
+  // items able to be opened independently of each other. This is a design choice
+  // and depends on the requirements of the project.
 
   const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <section className={styles.accordion}>
+    <div className={styles.accordion}>
       {items.map((item, index) => {
         const { name = "", text = "" } = item?.fields;
         return (
@@ -28,7 +29,7 @@ const Accordion = ({ items = [] }) => {
           />
         );
       })}
-    </section>
+    </div>
   );
 };
 

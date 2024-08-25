@@ -52,7 +52,7 @@ export default function Home({ items, error }) {
 
   return (
     <>
-      <h1 className={styles.title}>FAQ</h1>
+      <h1 className={styles.title}>Spørsmål og svar</h1>
       {renderContent()}
     </>
   );

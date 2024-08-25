@@ -13,6 +13,7 @@ const AccordionItem = ({
   const headerId = `accordion-header-${index}`;
   const panelId = `accordion-panel-${index}`;
 
+  // The semantics here have been considered for better accessibility
   return (
     <div className={styles.item}>
       <h3 className={styles.headerContainer}>
@@ -29,18 +30,14 @@ const AccordionItem = ({
           />
         </button>
       </h3>
-      <div
+      <section
+        id={panelId}
+        aria-labelledby={headerId}
         className={`${styles.content} ${isActive ? styles.activeContent : ""}`}
+        aria-hidden={!isActive}
       >
-        <p
-          id={panelId}
-          role="region"
-          aria-labelledby={headerId}
-          className={styles.contentParagraph}
-        >
-          {content}
-        </p>
-      </div>
+        <p className={styles.contentParagraph}>{content}</p>
+      </section>
     </div>
   );
 };

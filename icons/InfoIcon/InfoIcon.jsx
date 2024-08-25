@@ -1,5 +1,11 @@
 const InfoIcon = ({ fill = "#000000" }) => (
-  <svg fill={fill} width="24px" height="24px" viewBox="0 0 488.484 488.484">
+  <svg
+    fill={fill}
+    width="24px"
+    height="24px"
+    viewBox="0 0 488.484 488.484"
+    aria-hidden="true"
+  >
     <g>
       <g>
         <path
