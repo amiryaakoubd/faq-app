@@ -19,6 +19,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  column-gap: $spacing-xs;
   align-items: center;
   border: none;
   padding: $spacing-sm $spacing-md;
@@ -40,8 +41,21 @@
 }
 
 .icon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   fill: $color-white;
   transition: all 0.3s ease;
+
+  @media (min-width: $breakpoint-xs) {
+    font-size: $font-size-xl;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+  }
 }
 
 .header.active .icon {
