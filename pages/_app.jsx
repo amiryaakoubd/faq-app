@@ -1,5 +1,5 @@
 import "../styles/global.scss";
-import { Poppins } from "@next/font/google";
+import { Poppins } from "next/font/google";
 import Layout from "../components/Layout/Layout";
 
 const poppins = Poppins({
