@@ -30,3 +30,9 @@ or
 ```bash
 npm run test:watch
 ```
+
+## Further improvements
+
+- Could have used typescript for better type checking instead of regular javascript, but I chose Javascript for quicker development and to avoid spending too much time with type checking issues.
+- Perhaps populate the the website's title and description with some content from the API.
+- Ran into an issue with installing eslint-plugin-jest so I had to disable the eslint rule for jest. It would have been preferable to have the eslint rule enabled.

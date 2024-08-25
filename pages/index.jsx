@@ -12,10 +12,17 @@ export async function getStaticProps() {
     });
     const items = response.items;
 
+    // If I wanted to fetch more than one content type, I could do something like this:
+    // const otherResponse = await client.getEntries({
+    //   content_type: 'otherContentType',
+    //   include: 2,
+    // });
+
     return {
       props: {
         items,
         error: false,
+        // I could add otherResponse here as well if I wanted to fetch more than one content type
       },
     };
   } catch (error) {
@@ -54,6 +61,9 @@ export default function Home({ items, error }) {
   return (
     <>
       <h1 className={styles.title}>Spørsmål og svar</h1>
+      <p className={styles.description}>
+        Har du noen spørsmål angående Novacare? Her finner du kanskje noen svar
+      </p>
       {renderContent()}
     </>
   );
