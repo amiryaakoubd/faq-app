@@ -3,8 +3,6 @@ import styles from "./AccordionItem.module.scss";
 import CaretIcon from "../../icons/CaretIcon/CaretIcon";
 
 const AccordionItem = ({ index, isActive, onToggle, title, content }) => {
-  // TODO: Add aria attributes to the accordion
-
   const headerId = `accordion-header-${index}`;
   const panelId = `accordion-panel-${index}`;
 
@@ -24,14 +22,18 @@ const AccordionItem = ({ index, isActive, onToggle, title, content }) => {
           />
         </button>
       </h3>
-      <p
-        id={panelId}
-        role="region"
-        aria-labelledby={headerId}
+      <div
         className={`${styles.content} ${isActive ? styles.activeContent : ""}`}
       >
-        {content}
-      </p>
+        <p
+          id={panelId}
+          role="region"
+          aria-labelledby={headerId}
+          className={styles.contentParagraph}
+        >
+          {content}
+        </p>
+      </div>
     </div>
   );
 };

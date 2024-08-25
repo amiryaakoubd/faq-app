@@ -50,9 +50,10 @@
 }
 
 .content {
-  display: none;
-  margin: 0;
-  padding: $spacing-sm $spacing-md;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease 0s;
+
   font-size: $font-size-md;
   background-color: $color-background;
   border-radius: 0 0 4px 4px;
@@ -62,6 +63,21 @@
   }
 }
 
-.activeContent {
-  display: block;
+.content.activeContent {
+  /* 
+  This was a hack that I'm usually not a fan of because of the fixed value.. 
+  I implemented this for the slide-open animation because
+  you need a fixed max-height value to animate the transition.
+
+  The delay that happens when clicking between the accordion items makes me think that we maybe
+  shouldn't have this animation because it could be considered as bad UX, but I chose to leave
+  this feature in to show of some animation skills and to create a scenario where I could
+  show my consideration for UX as well.
+  */
+  max-height: 1000px;
+}
+
+.contentParagraph {
+  padding: $spacing-sm $spacing-md;
+  margin: 0;
 }

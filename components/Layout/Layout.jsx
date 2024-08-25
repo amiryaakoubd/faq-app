@@ -8,8 +8,12 @@ const Layout = ({ children }) => {
     <div className={styles.container}>
       <Head>
         <title>FAQ App</title>
-        <link rel="icon" href="/favicon.ico" />
-        {/* Add SEO elements here */}
+        <meta
+          name="description"
+          content="A simple FAQ application for questions about Novacare"
+        />
+        <link rel="icon" href="/logo_400x400.png" />
+        {/* Add metatags for better SEO here */}
       </Head>
       {/* <header className={styles.header}>
         
