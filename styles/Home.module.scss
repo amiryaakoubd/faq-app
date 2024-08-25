@@ -9,7 +9,7 @@
 }
 
 .title {
-  font-size: $font-size-heading-mobile;
+  font-size: $font-size-heading-xs;
   text-align: center;
   color: $color-primary;
   margin-top: 0;
@@ -18,7 +18,19 @@
 
 @media (min-width: $breakpoint-sm) {
   .title {
-    font-size: $font-size-heading-desktop;
+    font-size: $font-size-heading-sm;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .title {
+    font-size: $font-size-heading-md;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .title {
+    font-size: $font-size-heading-lg;
   }
 }
 
