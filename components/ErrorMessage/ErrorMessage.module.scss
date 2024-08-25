@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.errorMessage {
+  display: flex;
+  padding: $spacing-md;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: $color-white;
+  color: $color-error;
+  width: 100%;
+  column-gap: $spacing-sm;
+  align-items: center;
+  @media (min-width: $breakpoint-sm) {
+    width: fit-content;
+  }
+
+  svg {
+    min-height: 24px;
+    min-width: 24px;
+  }
+}
