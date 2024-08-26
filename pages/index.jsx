@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Accordion from '../components/Accordion/Accordion';
 import ErrorMessage from '../components/ErrorMessage/ErrorMessage';
 import client from '../lib/contentful';
@@ -37,7 +38,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ items, error }) {
+function Home({ items = [], error }) {
   const { fields = {} } = items && items.length > 0 ? items[0] : {};
   const { accordionItems = [] } = fields;
 
@@ -68,3 +69,10 @@ export default function Home({ items, error }) {
     </>
   );
 }
+
+Home.propTypes = {
+  items: PropTypes.array.isRequired,
+  error: PropTypes.bool,
+};
+
+export default Home;

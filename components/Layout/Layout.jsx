@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import styles from './Layout.module.scss';
 
@@ -17,6 +18,10 @@ const Layout = ({ children }) => {
       </main>
     </div>
   );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node,
 };
 
 export default Layout;
